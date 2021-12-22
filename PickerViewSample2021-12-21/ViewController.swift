@@ -8,8 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var textField: UITextField! {
         didSet {
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     private var pickerView = UIPickerView()
     private let fimNumber = [Int](1...7)
 
-    private let fimItem = ["食事","整容","理解","表出","記憶","社会的交流","歩行"]
+    private let fimItem = ["食事", "整容", "理解", "表出", "記憶", "社会的交流", "歩行"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +31,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
-
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         fimItem.count
     }
@@ -49,12 +45,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-
-
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerView {
             label.text = fimNumber.map { String($0) }[row]

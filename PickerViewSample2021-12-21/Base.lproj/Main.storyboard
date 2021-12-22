@@ -52,11 +52,17 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="cXs-nw-xlp" id="ybT-Ul-5m9"/>
-                                            <outlet property="textField" destination="klR-qd-RWx" id="uDE-fz-mMh"/>
+                                            <outlet property="textField" destination="klR-qd-RWx" id="TMz-1N-DZN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOy-JY-hny">
+                                <rect key="frame" x="151" y="151" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +70,7 @@
                     <connections>
                         <outlet property="label" destination="5Fv-N2-cab" id="GXP-Zh-3jZ"/>
                         <outlet property="tableView" destination="31C-B7-kaC" id="w5a-nx-Agh"/>
+                        <outlet property="textField" destination="JOy-JY-hny" id="qaz-bo-2jW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
