@@ -17,15 +17,22 @@ class TableViewCell: UITableViewCell {
     }
     let pickerView = UIPickerView()
     private let fimNumber = [Int](1...7)
-    
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        pickerView.delegate = self
+        pickerView.dataSource = self
+
+    }
 }
 
 
 extension TableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerView {
-            label.text = fimNumber.map { String($0) }[row]
+            textField.text = fimNumber.map { String($0) }[row]
         }
+
         textField.resignFirstResponder()
     }
 
@@ -40,4 +47,5 @@ extension TableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
         let string = fimNumber.map { String($0) }[row]
         return string
     }
+
 }
